@@ -1,0 +1,33 @@
+$red: #E50000;
+
+
+.list-img{
+    width: 100%;
+}
+.text{
+    font-size: 18px;
+    margin: 0;
+}
+.list-btn{
+    margin: 5px;
+    color: #fff;
+    padding: 5px 10px;
+    background-color: $red;
+    border-radius: 10px;
+    transition: .5s;
+    border: 1px solid $red;
+    &:hover{
+        background-color: #fff;
+        color: #000;
+        text-decoration: none;
+    }
+}
+.marked{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: $red;
+    top: 10px;
+    right: 10px;
+    border-radius: 50%;
+}

@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+$red: #E50000;
+
+.page-item.active .page-link{
+    
+    background-color: $red;
+    border-color: $red;
+}
+.page-link {
+    color: $red;
+    &:hover{
+        color: $red;
+        border-color: $red;
+    }
+}

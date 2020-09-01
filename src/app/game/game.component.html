@@ -1,0 +1,7 @@
+<div [ngClass]="{'marked': isMarked}"></div>
+<img src={{item.img}} alt="" class="list-img">
+<p class="text">{{item.text}}</p>
+<div class="row justify-content-between">
+    <a href="{{item.url}}" class="list-btn">Запустить</a>
+    <a (click)="onClick()" class="list-btn">В избранное</a>
+</div>

@@ -1,0 +1,18 @@
+
+<div class="row justify-content-between">
+    <div class="d-flex flex-column align-items-center">
+        <label for="input-search" class="label-search">поиск по названию</label>
+        <input type="text" class="input-search" id="input-search" [(ngModel)] = "searchStr">
+    </div> 
+    <div class="d-flex flex-column align-items-center">
+        <label for="input-qual" class="label-qual">колличество игр на странице</label>
+        <input type="text" class="input-qual" id="input-qual" (keyup) = "ngOnInit()" [(ngModel)] = "qualStr">
+    </div> 
+    <div class="d-flex flex-column align-items-center justify-content-center">
+        <p class="text">Всего игр: <span>{{game}}</span></p>
+    </div>
+</div>
+<div class="row f-wrap justify-content-center">
+    <gl-game *ngFor="let i of list | search:searchStr" [item] = "i" class="col-3 m-3 p-0 d-flex flex-column align-items-center list-li"></gl-game>
+</div>
+<ngb-pagination class="d-flex justify-content-center" [collectionSize]="collectionSize" [pageSize]="itemsPerPage" [(page)]="page" [boundaryLinks]="true" (pageChange)="onPageChanged($event)"></ngb-pagination>

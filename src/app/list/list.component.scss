@@ -1,0 +1,12 @@
+$red: #E50000;
+
+.list-li{
+    position: relative;
+    border: 1px solid $red;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+    &:hover{
+        box-shadow: 0 0 1px 1px $red;
+    }
+}
